@@ -1,0 +1,122 @@
+@media (min-width:768px){
+    header .nav_menu ul{
+        display: block !important;
+    }
+}
+
+@media (max-width:767px) {
+    header.header {
+        padding: 10px 0;
+    }
+    .mobile-trigger{
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        right: 0;
+        top: 20px;
+    }
+    .mobile-trigger i {
+        position: relative;
+        z-index: 2;
+    }
+    .mobile-trigger i,
+    .mobile-trigger i:after,
+    .mobile-trigger i:before{
+        border-radius: 1px;
+        display: inline-block;
+        height: 2px;
+        background-color: #fff;
+        width: 22px;
+        -webkit-transition: all .3s ease-in;
+        -o-transition: all .3s ease-in;
+        transition: all .3s ease-in;
+    }
+    
+    .mobile-trigger i:before {
+        position: absolute;
+        content: "";
+        top: -6px;
+    }    
+    .mobile-trigger i:after {
+        position: absolute;
+        content: "";
+        bottom: -6px;
+    }
+    .mobile-open .mobile-trigger i {
+        background: transparent;
+    }
+    .mobile-open .mobile-trigger i:before {
+        top: 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    .mobile-open .mobile-trigger i:after {
+        top: 0;
+        -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+    header .nav_menu ul {
+        background-color: #EF3912;
+        text-align: left;
+        padding: 10px 20px;
+        width: 240px;
+        margin-left: auto;
+        position: absolute;
+        right: 0px;
+        display: none;
+        top: 70px;
+    }
+    header .nav_menu ul li a {
+        color:var(--white);
+        line-height: 1.4;
+    }
+    header.header {
+        position: relative;
+        z-index: 3;
+    }
+    header .nav_menu ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    /* about us reponsive */
+    .aboutus_section .about_two_col {
+        display: block;
+        flex-wrap: unset;
+        align-items: unset;
+        text-align: center;
+    }
+    .aboutus_section .about_image {
+        flex-basis: 100%;
+        margin-right: 0%;
+        margin-bottom: 40px;
+    }
+    .aboutus_section .about_content {
+        flex-basis: 100%;
+    }
+    /* service section */
+    .split_col {
+        flex-basis: 100%;
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+    .image__container {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .hero_banner{
+        padding: 100px 0 50px;
+    }
+}
+@media(max-width:560px){
+    .mail,
+    .footer-content {
+      display: block;
+      margin: 0 0 30px;
+  }
+  .phonenumber{
+    margin: 0;
+  }
+}

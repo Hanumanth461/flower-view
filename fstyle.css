@@ -1,0 +1,284 @@
+header .header_main {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+header .logo {
+    flex-basis: 20%;
+    margin-right: 5%;
+}
+header .nav_menu {
+    flex-basis: 75%;
+}
+header .nav_menu ul {
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+header .nav_menu ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+header .nav_menu ul li a{
+    color: var(--white);
+    list-style: none;
+    text-decoration: none;
+}
+header.header {
+    padding: 25px 0;
+    background-color: #EF3912;
+}
+header .logo img {
+    width: 100%;
+    max-width: 50px;
+    min-height: 50px;
+    max-height: 50px;
+    object-fit: cover;
+}
+header .nav_menu ul li a span {
+    display: block;
+    transition: .3s ease-in-out all;
+    transform: translateY(0);
+}
+
+header .nav_menu ul li a {
+    overflow: hidden;
+    transition: .3s;
+    position: relative;
+    display: flex;
+    max-width: max-content;
+    margin: 0;
+    align-items: center;
+}
+header .nav_menu ul li a:hover span {
+    transform: translateY(100%);
+}
+header .nav_menu ul li a:hover:before {
+    transform: translateY(0);
+    color: #fff;
+}
+header .nav_menu ul li a:before {
+    position: absolute;
+    content: attr(data-title);
+    width: 100%;
+    top: 0;
+    right: 0;
+    transform: translateY(-100%);
+    transition: .3s all;
+}
+
+/* sticky css */
+header .nav_menu ul li.active a {
+    color: #370692;
+    font-weight: 600;
+}
+header .nav_menu ul li.active a:before {
+    color: #370692;
+    font-weight: 600;
+}
+header.header.fixed-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 4;
+    left: 0;
+    right: 0;
+}
+/* header css ends */
+
+/* Hero section css starts*/
+.hero_banner{
+    background-image: url(./assets/flowerhero.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* min-height: 450px; */
+    position: relative;
+    z-index: 2;
+    padding:170px 0 120px;
+}
+.hero_banner *{
+color: var(--white);
+text-align: center;
+}
+.hero_banner:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    background-color: rgb(0 0 0 / 50%);
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: -1;
+}
+/* Hero section css starts*/
+
+/* About section */
+.aboutus_section .about_two_col {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.aboutus_section .about_image {
+    flex-basis: 45%;
+    margin-right: 5%;
+}
+.aboutus_section .about_content {
+    flex-basis: 50%;
+}
+.aboutus_section .about_image img {
+    width: 100%;
+    display: block;
+    min-height: 350px;
+    max-height: 350px;
+    object-fit: cover;
+}
+
+/* Service section */
+.service_section {
+    background-color: #ebebeb;
+}
+.service_heading{
+    margin-bottom: 70px;
+}
+.service_heading,
+.three_col_service {
+    text-align: center;
+}
+.split_col {
+    flex-basis: 31.33%;
+    margin-right: 3%;
+}
+.split_col:nth-child(2n+3) {
+    margin-right: 0;
+}
+
+/* Gallery with filters */
+.gallery_section .gallery__heading{
+    margin-bottom: 50px;
+}
+.gallery_section .glist__items ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.gallery_section .glist__items ul li {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px;
+    background-color: var(--black);
+    color:var(--white);
+    border-radius: 3px;
+    cursor: pointer;
+}
+.image__container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 30px;
+    margin-top:50px;
+}
+
+.image__container .split_image_conatiner img {
+    display: block;
+    width: 100%;
+    min-height: 250px;
+    max-height: 250px;
+    object-fit: cover;
+}
+.hide {
+    display: none;
+}
+.gallery_section .glist__items ul li.active {
+    background-color: #EF3912;
+}
+.gallery_section .image_caption {
+    margin: 10px 0;
+}
+.image__container .image_caption h6 {
+    margin: 0;
+}
+
+/* contact form css */
+.contact_form{
+    background-color: #ebebeb;
+} 
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  #contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  #contact-form input[type="text"],
+  #contact-form input[type="email"],
+  #contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+  }
+  .contact__heading{
+    margin: 0 0 50px;
+  }
+  
+  #contact-form textarea {
+    height: 100px;
+  }
+  
+  #contact-form input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  #contact-form input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  /* footer csss */
+  footer {
+    padding: 25px 0;
+    background-color: #EF3912;
+    text-align: center;
+  }
+  .mail,
+  .phonenumber,
+  .footer-content {
+    display: inline-block;
+    margin: 0 30px;
+    vertical-align: middle;
+}
+.mail a,
+.phonenumber a,
+.footer-content {
+    margin: 0;
+    text-decoration: none;
+    color: var(--white);
+}
+footer .logo img {
+    width: 100%;
+    max-width: 50px;
+}
+html {
+    scroll-behavior: smooth;
+  }
