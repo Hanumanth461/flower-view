@@ -91,7 +91,7 @@ header.header.fixed-header {
 
 /* Hero section css starts*/
 .hero_banner{
-    background-image: url(./assets/flowerhero.jpeg);
+    background-image: url(flowerhero.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
